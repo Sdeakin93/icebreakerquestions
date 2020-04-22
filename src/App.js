@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import GetQuestions from './components/Questions/GetQuestions';
+import questions from '././components/Questions/questions.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      body: questions[0].body,
+    };
+  }
+  randomQuestion() {
+    const randomNumber = Math.floor(Math.random() * questions.length);
+    return questions[randomNumber]; 
+  }
+
+  shuffleQuestions(array){
+    return array.sort(()=>Math.random()-0.5)
+  }
+
+  handleClick = () => {
+    const generateRandomQuestion = this.randomQuestion();
+    this.setState({
+      body: generateRandomQuestion.body
+    });
+    this.shuffleQuestions(questions)
+  };
+
+  render() {
+    return (
+      <div>
+        <GetQuestions
+          handleClick={this.handleClick}
+          {...this.state}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;

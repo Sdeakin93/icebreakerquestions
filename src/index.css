@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'MarkWebPro';
+  src: 
+    local('MarkWebPro'), 
+    url(./fonts/MarkWebPro/MWP-SB-Reg.woff) format('woff'),
+    url(./fonts/MarkWebPro/MWP-SB-Reg.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'MarkWebProLight';
+  src: 
+    local('MarkWebProLight'), 
+    url(./fonts/MarkWebPro/MWP-SB-Light.woff) format('woff'),
+    url(./fonts/MarkWebPro/MWP-SB-Light.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'MarkWebProBold';
+  src: 
+    local('MarkWebProBold'), 
+    url(./fonts/MarkWebPro/MWP-SB-Bold.woff) format('woff'),
+    url(./fonts/MarkWebPro/MWP-SB-Bold.woff2) format('woff2');
+}
