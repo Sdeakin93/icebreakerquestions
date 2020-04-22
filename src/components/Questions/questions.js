@@ -9,7 +9,7 @@ const posts = [
         "body" : "You're going to a supermarket, and have only enough time in the store to go to one section, so which type of pasta would you choose?"
     },
     {
-        "body" : "Demi Lovato and Sam Smith just came out with the video for their new song I'm Ready featuring a sports theme - what sport do you think you have the best chance of representing your country at?"
+        "body" : "Demi Lovato and Sam Smith just came out with the video for their new song featuring a sports theme - what sport do you think you have the best chance of representing your country at?"
     }
 ];
 
